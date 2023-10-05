@@ -1,5 +1,5 @@
-bucket         = "techstack-test"
+bucket         = "techstackgen-test"
           key            = "terraform.tfstate"
-          region         = "ap-south-1"
-          dynamodb_table = "teckstack-test"
+          region         = "eu-west-1"
+          dynamodb_table = "techstack-test"
           encrypt        = true

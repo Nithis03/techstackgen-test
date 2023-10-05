@@ -1,12 +1,3 @@
-variable "region" {
-                      description = "The region where the resources will be deployed. This can correspond to the region of any cloud provider, such as AWS, Azure, Google Cloud, etc."
-                      type        = string
-                    }
-
-                    variable "environment" {
-                      description = "The environment (e.g., dev, prod)"
-                      type        = string
-                    }
 
 variable "user_pool_name" {
   description = "Name of the AWS Cognito User Pool"
@@ -77,10 +68,20 @@ variable "recovery_mechanism_priority" {
   type        = number
 }
 
+
 variable "username_attributes" {
   description = "List of username attributes."
   type        = list(string)
 }
+
+variable "region" {
+            description = "The region where the resources will be deployed. This can correspond to the region of any cloud provider, such as AWS, Azure, Google Cloud, etc."
+            type        = string
+          }
+          variable "environment" {
+            description = "The environment (e.g., dev, prod)"
+            type        = string
+          }
 
 variable "user_pool_client_name" {
   description = "Name of the userpool app client."
@@ -100,38 +101,4 @@ variable "supported_identity_providers" {
   description = "List of supported identity providers for the User Pool Client"
   type        = list(string)
 }
-
-variable "ecr_repository_name" {
-  type        = string
-  description = "ecr repository name"
-}
-
-variable "ecs_service_name" {
-  type        = string
-  description = "ecs service name"
-}
-
-variable "ecs_container_name" {
-  type        = string
-  description = "ecs service name"
-}
-
-variable "ecs_container_port_no" {
-  type        = number
-  description = "ecs container port name"
-}
-variable "ecs_cluster_name" {
-    description = "The ecs cluster name"
-    type        = string
-}
-variable "git_repository_url" {
-  type        = string
-  description = "git repository URL"
-}
-
-variable "ecr_image_uri" {
-  type        = string
-  description = "ecr image URI"
-}
-
 
